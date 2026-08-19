@@ -1,169 +1,331 @@
-﻿using System;
+﻿// using System;
+// using System.Collections.Generic;
+
+// // list, hashtree, dic, 
+
+// class Person
+// {
+//     public int Id;
+//     public string name;
+//     public int age;
+//     public string city;
+//     public string phone;
+// }
+
+// class Program
+// {
+//     static List<Person> people = new List<Person>();
+//     // static field or static variable
+
+//     static void Main()
+//     {
+//         Person FirstPerson = new Person();
+
+//         FirstPerson.Id = 100;
+//         FirstPerson.name = "Dinesh";
+//         FirstPerson.age = 25;
+//         FirstPerson.city = "Karur";
+//         FirstPerson.phone = "9876453210";
+
+//         people.Add(FirstPerson);
+
+//          Person SecondPerson = new Person();
+
+//         SecondPerson.Id = 101;
+//         SecondPerson.name = "Dinesh";
+//         SecondPerson.age = 25;
+//         SecondPerson.city = "Karur";
+//         SecondPerson.phone = "9876453210";
+
+//         people.Add(SecondPerson);
+
+//         Console.WriteLine("=======================");
+//         Console.WriteLine("        PEOPLE ");
+//         Console.WriteLine("=======================");
+
+//         Console.WriteLine("1. Add person");
+//         Console.WriteLine("2. View person");
+//         Console.WriteLine("3. Update person");
+//         Console.WriteLine("4. Delete person");
+//         Console.WriteLine("5. Search person");
+        
+
+//         Console.WriteLine("Enter your choice: ");
+//         int choice = Convert.ToInt32(Console.ReadLine());
+
+//         switch(choice)
+//         {
+//             case 1:
+//                 AddPerson();
+//                 break;
+//             case 2:
+//                 ViewPerson();
+//                 break;
+//             case 3:
+//                 UpdatePerson();
+//                 break;
+//             case 4:
+//                 DeletePerson();
+//                 break;
+//             case 5:
+//                 SearchPerson();
+//                 break;
+//             case 6:
+//                 Console.WriteLine("Invaild Inputs");
+//                 break;
+//         }
+
+
+//     }
+
+//     static void AddPerson()
+//     {
+//         Console.WriteLine("=======================");
+//         Console.WriteLine("        ADD person");
+//         Console.WriteLine("=======================");
+
+//         Person newPerson = new Person();
+
+//         Console.WriteLine("Enter person ID: ");
+//         newPerson.Id = Convert.ToInt32(Console.ReadLine());
+
+//         Console.WriteLine("Enter person Name: ");
+//         newPerson.name = Console.ReadLine();
+
+//         Console.WriteLine("Enter person age: ");
+//         newPerson.age = Convert.ToInt32(Console.ReadLine());
+
+//         Console.WriteLine("Enter person City: ");
+//         newPerson.city = Console.ReadLine();
+
+//         Console.WriteLine("Enter person Phone: ");
+//         newPerson.phone = Console.ReadLine();
+
+//         people.Add(newPerson);
+
+//         Console.WriteLine("Person Added Successfully!!");
+//     }
+
+//     static void ViewPerson()
+//     {
+//         Console.WriteLine("=======================");
+//         Console.WriteLine("        VIEW person");
+//         Console.WriteLine("=======================");
+
+//         foreach (Person person in people)
+//         {
+//             Console.WriteLine($"Person ID: {person.Id}");
+//             Console.WriteLine($"Person Name: {person.name}");
+//             Console.WriteLine($"Person Age: {person.age}");
+//             Console.WriteLine($"Person City: {person.city}");
+//             Console.WriteLine($"Person Phone: {person.phone}");
+//             Console.WriteLine("=======================");
+//         }
+//     }
+
+//     static void UpdatePerson()
+//     {
+//         Console.WriteLine("UPDATE person");
+//     }
+
+//     static void DeletePerson()
+//     {
+//         Console.WriteLine("DELETE person");
+
+//     }
+
+//     static void SearchPerson()
+//     {
+//         Console.WriteLine("=======================");
+//         Console.WriteLine("       SEARCH person");
+//         Console.WriteLine("=======================");
+
+//         Console.WriteLine("Enter personID: ");
+//         int searchId = Convert.ToInt32(Console.ReadLine());
+
+//         bool found = false;
+
+//         foreach (Person person in people)
+//         {
+//             if(person.Id == searchId)
+//             {
+//                 Console.WriteLine("Person Found!");
+
+                
+//                 Console.WriteLine($"Person ID: {person.Id}");
+//                 Console.WriteLine($"Person Name: {person.name}");
+//                 Console.WriteLine($"Person Age: {person.age}");
+//                 Console.WriteLine($"Person City: {person.city}");
+//                 Console.WriteLine($"Person Phone: {person.phone}");
+
+//                 found = true;
+//             }
+//         }
+
+//         if(found == false)
+//         {
+//             Console.WriteLine("Person Not Found");
+//         }
+
+//     }
+// }
+
+
+// Food order
+
+using System;
 using System.Collections.Generic;
 
-// list, hashtree, dic, 
-
-class Person
+class Food
 {
     public int Id;
     public string name;
-    public int age;
-    public string city;
-    public string phone;
+    public double price;
+    public int quantity;
 }
 
-class Program
-{
-    static List<Person> people = new List<Person>();
+class Program {
+
+    static List<Food> order = new List<Food>();
+    // static field
 
     static void Main()
     {
-        Person FirstPerson = new Person();
-
-        FirstPerson.Id = 100;
-        FirstPerson.name = "Dinesh";
-        FirstPerson.age = 25;
-        FirstPerson.city = "Karur";
-        FirstPerson.phone = "9876453210";
-
-        people.Add(FirstPerson);
-
-         Person SecondPerson = new Person();
-
-        SecondPerson.Id = 101;
-        SecondPerson.name = "Dinesh";
-        SecondPerson.age = 25;
-        SecondPerson.city = "Karur";
-        SecondPerson.phone = "9876453210";
-
-        people.Add(SecondPerson);
-
-        Console.WriteLine("=======================");
-        Console.WriteLine("        PEOPLE ");
-        Console.WriteLine("=======================");
-
-        Console.WriteLine("1. Add person");
-        Console.WriteLine("2. View person");
-        Console.WriteLine("3. Update person");
-        Console.WriteLine("4. Delete person");
-        Console.WriteLine("5. Search person");
+        int choice = 0;
+        while(choice != 5) {
         
+            Console.WriteLine("1. Add Food");
+            Console.WriteLine("2. View Food");
+            Console.WriteLine("3. Update Food");
+            Console.WriteLine("4. Delete Food");
+            Console.WriteLine("5. Exit");
 
-        Console.WriteLine("Enter your choice: ");
+
+            Console.WriteLine("Enter your choice: ");
+            choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1: 
+                    AddFood();
+                    break;
+                case 2: 
+                    ViewFood();
+                    break;
+                case 3: 
+                    UpdateFood();
+                    break;
+                case 4: 
+                    DeleteFood();
+                    break;
+                case 5: 
+                    Console.WriteLine("Invalid Choices!");
+                    break;
+            }
+        }
+    }
+
+    static void AddFood()
+    {
+        Console.WriteLine("Food Menu");
+
+        Console.WriteLine("1. Briyani");
+        Console.WriteLine("2. Fired Rice");
+        Console.WriteLine("3. Noodles");
+
+        Console.WriteLine("Select food: ");
         int choice = Convert.ToInt32(Console.ReadLine());
 
-        switch(choice)
+        Food food = new Food();
+
+        if(choice ==1 )
         {
-            case 1:
-                AddPerson();
-                break;
-            case 2:
-                ViewPerson();
-                break;
-            case 3:
-                UpdatePerson();
-                break;
-            case 4:
-                DeletePerson();
-                break;
-            case 5:
-                SearchPerson();
-                break;
-            case 6:
-                Console.WriteLine("Invaild Inputs");
-                break;
+            food.Id = 1;
+            food.name = "Briyani";
+            food.quantity = 1;
+            food.price = 210;
+        } else if (choice == 2)
+        {
+            food.Id = 2;
+            food.name = "Fired rice";
+            food.quantity = 1;
+            food.price = 200;
+        } else if (choice == 3)
+        {
+            food.Id = 3;
+            food.name = "Noodles";
+            food.quantity = 1;
+            food.price = 120;
+        } else
+        {
+            Console.WriteLine("Invalid input");
+            return;
         }
 
-
+        order.Add(food);
+        // list -> collection -> object key and value pair 
+        // {
+        //      "Id": 1
+        //      "name": "Briyani",
+        // },
+        // {
+        //      "Id": 2
+        //      "name": "Briyani",
+        // }
+        Console.WriteLine("Added successfully");
     }
 
-    static void AddPerson()
+    static void ViewFood()
     {
-        Console.WriteLine("=======================");
-        Console.WriteLine("        ADD person");
-        Console.WriteLine("=======================");
+        Console.WriteLine("View Food");
 
-        Person newPerson = new Person();
-
-        Console.WriteLine("Enter person ID: ");
-        newPerson.Id = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Enter person Name: ");
-        newPerson.name = Console.ReadLine();
-
-        Console.WriteLine("Enter person age: ");
-        newPerson.age = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Enter person City: ");
-        newPerson.city = Console.ReadLine();
-
-        Console.WriteLine("Enter person Phone: ");
-        newPerson.phone = Console.ReadLine();
-
-        people.Add(newPerson);
-
-        Console.WriteLine("Person Added Successfully!!");
-    }
-
-    static void ViewPerson()
-    {
-        Console.WriteLine("=======================");
-        Console.WriteLine("        VIEW person");
-        Console.WriteLine("=======================");
-
-        foreach (Person person in people)
+        if(order.Count == 0)
         {
-            Console.WriteLine($"Person ID: {person.Id}");
-            Console.WriteLine($"Person Name: {person.name}");
-            Console.WriteLine($"Person Age: {person.age}");
-            Console.WriteLine($"Person City: {person.city}");
-            Console.WriteLine($"Person Phone: {person.phone}");
-            Console.WriteLine("=======================");
+            Console.WriteLine("No Food");
+        }
+
+        foreach(Food food in order)
+        {
+            Console.WriteLine($"Food id: {food.Id}");
+            Console.WriteLine($"Food name: {food.name}");
+            Console.WriteLine($"Food Price: {food.price}");
+            Console.WriteLine($"Food Quantity: {food.quantity}");
         }
     }
 
-    static void UpdatePerson()
+    static void UpdateFood()
     {
-        Console.WriteLine("UPDATE person");
-    }
+        Console.WriteLine("Update Food");
 
-    static void DeletePerson()
-    {
-        Console.WriteLine("DELETE person");
-    }
-
-    static void SearchPerson()
-    {
-        Console.WriteLine("=======================");
-        Console.WriteLine("       SEARCH person");
-        Console.WriteLine("=======================");
-
-        Console.WriteLine("Enter personID: ");
-        int searchId = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter food ID: ");
+        int foodId = Convert.ToInt32(Console.ReadLine());
 
         bool found = false;
 
-        foreach (Person person in people)
+        foreach(Food food in order)
         {
-            if(person.Id == searchId)
+            if(food.Id == foodId)
             {
-                Console.WriteLine("Person Found!");
+                Console.WriteLine("Food Found !");
 
-                
-                Console.WriteLine($"Person ID: {person.Id}");
-                Console.WriteLine($"Person Name: {person.name}");
-                Console.WriteLine($"Person Age: {person.age}");
-                Console.WriteLine($"Person City: {person.city}");
-                Console.WriteLine($"Person Phone: {person.phone}");
+                Console.WriteLine("Enter new name: ");
+                food.name = Console.ReadLine();
 
                 found = true;
+                Console.WriteLine("Order updated successfully");
             }
         }
-
+        
         if(found == false)
         {
-            Console.WriteLine("Person Not Found");
+            Console.WriteLine("Not found");
         }
 
+
+    }
+    
+    static void DeleteFood()
+    {
+        Console.WriteLine("Delete Food");
     }
 }
