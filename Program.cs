@@ -173,159 +173,249 @@
 
 // Food order
 
-using System;
-using System.Collections.Generic;
+// using System;
+// using System.Collections.Generic;
 
-class Food
+// class Food
+// {
+//     public int Id;
+//     public string name;
+//     public double price;
+//     public int quantity;
+// }
+
+// class Program {
+
+//     static List<Food> order = new List<Food>();
+//     // static field
+
+//     static void Main()
+//     {
+//         int choice = 0;
+//         while(choice != 5) {
+        
+//             Console.WriteLine("1. Add Food");
+//             Console.WriteLine("2. View Food");
+//             Console.WriteLine("3. Update Food");
+//             Console.WriteLine("4. Delete Food");
+//             Console.WriteLine("5. Exit");
+
+
+//             Console.WriteLine("Enter your choice: ");
+//             choice = Convert.ToInt32(Console.ReadLine());
+
+//             switch (choice)
+//             {
+//                 case 1: 
+//                     AddFood();
+//                     break;
+//                 case 2: 
+//                     ViewFood();
+//                     break;
+//                 case 3: 
+//                     UpdateFood();
+//                     break;
+//                 case 4: 
+//                     DeleteFood();
+//                     break;
+//                 case 5: 
+//                     Console.WriteLine("Invalid Choices!");
+//                     break;
+//             }
+//         }
+//     }
+
+//     static void AddFood()
+//     {
+//         Console.WriteLine("Food Menu");
+
+//         Console.WriteLine("1. Briyani");
+//         Console.WriteLine("2. Fired Rice");
+//         Console.WriteLine("3. Noodles");
+
+//         Console.WriteLine("Select food: ");
+//         int choice = Convert.ToInt32(Console.ReadLine());
+
+//         Food food = new Food();
+
+//         if(choice ==1 )
+//         {
+//             food.Id = 1;
+//             food.name = "Briyani";
+//             food.quantity = 1;
+//             food.price = 210;
+//         } else if (choice == 2)
+//         {
+//             food.Id = 2;
+//             food.name = "Fired rice";
+//             food.quantity = 1;
+//             food.price = 200;
+//         } else if (choice == 3)
+//         {
+//             food.Id = 3;
+//             food.name = "Noodles";
+//             food.quantity = 1;
+//             food.price = 120;
+//         } else
+//         {
+//             Console.WriteLine("Invalid input");
+//             return;
+//         }
+
+//         order.Add(food);
+//         // list -> collection -> object key and value pair 
+//         // {
+//         //      "Id": 1
+//         //      "name": "Briyani",
+//         // },
+//         // {
+//         //      "Id": 2
+//         //      "name": "Briyani",
+//         // }
+//         Console.WriteLine("Added successfully");
+//     }
+
+//     static void ViewFood()
+//     {
+//         Console.WriteLine("View Food");
+
+//         if(order.Count == 0)
+//         {
+//             Console.WriteLine("No Food");
+//         }
+
+//         foreach(Food food in order)
+//         {
+//             Console.WriteLine($"Food id: {food.Id}");
+//             Console.WriteLine($"Food name: {food.name}");
+//             Console.WriteLine($"Food Price: {food.price}");
+//             Console.WriteLine($"Food Quantity: {food.quantity}");
+//         }
+//     }
+
+//     static void UpdateFood()
+//     {
+//         Console.WriteLine("Update Food");
+
+//         Console.WriteLine("Enter food ID: ");
+//         int foodId = Convert.ToInt32(Console.ReadLine());
+
+//         bool found = false;
+
+//         foreach(Food food in order)
+//         {
+//             if(food.Id == foodId)
+//             {
+//                 Console.WriteLine("Food Found !");
+
+//                 Console.WriteLine("Enter new name: ");
+//                 food.name = Console.ReadLine();
+
+//                 found = true;
+//                 Console.WriteLine("Order updated successfully");
+//             }
+//         }
+        
+//         if(found == false)
+//         {
+//             Console.WriteLine("Not found");
+//         }
+
+
+//     }
+    
+//     static void DeleteFood()
+//     {
+//         Console.WriteLine("Delete Food");
+//     }
+// }
+
+
+// loops (for, foreach) array, objects
+
+
+class Program
 {
-    public int Id;
-    public string name;
-    public double price;
-    public int quantity;
-}
-
-class Program {
-
-    static List<Food> order = new List<Food>();
-    // static field
-
     static void Main()
     {
-        int choice = 0;
-        while(choice != 5) {
-        
-            Console.WriteLine("1. Add Food");
-            Console.WriteLine("2. View Food");
-            Console.WriteLine("3. Update Food");
-            Console.WriteLine("4. Delete Food");
-            Console.WriteLine("5. Exit");
+
+        // array  -> []
+        // index start with 0
+        // 0, 1, 2, 3, 4
+
+        // int[] marks = { 85, 34, 45, 65, 76 };
 
 
-            Console.WriteLine("Enter your choice: ");
-            choice = Convert.ToInt32(Console.ReadLine());
+        // condition -> pass mark 40 > pass ? fail
 
-            switch (choice)
-            {
-                case 1: 
-                    AddFood();
-                    break;
-                case 2: 
-                    ViewFood();
-                    break;
-                case 3: 
-                    UpdateFood();
-                    break;
-                case 4: 
-                    DeleteFood();
-                    break;
-                case 5: 
-                    Console.WriteLine("Invalid Choices!");
-                    break;
-            }
-        }
-    }
+        // Console.WriteLine($"{marks.Length}");
+        // marks[2]
 
-    static void AddFood()
-    {
-        Console.WriteLine("Food Menu");
-
-        Console.WriteLine("1. Briyani");
-        Console.WriteLine("2. Fired Rice");
-        Console.WriteLine("3. Noodles");
-
-        Console.WriteLine("Select food: ");
-        int choice = Convert.ToInt32(Console.ReadLine());
-
-        Food food = new Food();
-
-        if(choice ==1 )
-        {
-            food.Id = 1;
-            food.name = "Briyani";
-            food.quantity = 1;
-            food.price = 210;
-        } else if (choice == 2)
-        {
-            food.Id = 2;
-            food.name = "Fired rice";
-            food.quantity = 1;
-            food.price = 200;
-        } else if (choice == 3)
-        {
-            food.Id = 3;
-            food.name = "Noodles";
-            food.quantity = 1;
-            food.price = 120;
-        } else
-        {
-            Console.WriteLine("Invalid input");
-            return;
-        }
-
-        order.Add(food);
-        // list -> collection -> object key and value pair 
+        // for loop 
+        // for (int i = 0; i < marks.Length; i++)
         // {
-        //      "Id": 1
-        //      "name": "Briyani",
-        // },
-        // {
-        //      "Id": 2
-        //      "name": "Briyani",
+        //     // Console.WriteLine($"{marks[i]}");
+        //     if(marks[i] >= 40)
+        //     {
+        //         Console.WriteLine("Pass");
+        //     } else
+        //     {
+        //         Console.WriteLine("Fail");  
+        //     }
         // }
-        Console.WriteLine("Added successfully");
-    }
 
-    static void ViewFood()
-    {
-        Console.WriteLine("View Food");
+        // int[] amount = {1200, 490, 560};
+        // // sum of all number in an array
 
-        if(order.Count == 0)
+        // int total = 0;
+
+        // foreach(int price in amount)
+        // {
+        //     // Console.WriteLine($"{price}");
+        //     // total = total + price;
+
+        //     total += price;
+        // }
+
+        // Console.WriteLine($"Total: {total}");
+
+        // highest number in an array
+
+        // lowest number in an array, second lowest number in an array 
+        
+
+        // int[] num = {34, 45, 67, 34, 78};
+
+        // int HighestValue = num[0];
+
+        // for (int i = 1; i < num.Length; i++)
+        // {
+        //     if(num[i] > HighestValue)
+        //     {
+        //         HighestValue = num[i];
+        //     }
+        // }
+        // Console.WriteLine($"Highest value: {HighestValue}");
+
+        // attendance system
+
+        int[] attendance = {0, 1, 1, 0, 1, 1, 0, 1};
+
+        int present = 0;
+        int absent = 0;
+
+        foreach (int status in attendance)
         {
-            Console.WriteLine("No Food");
-        }
-
-        foreach(Food food in order)
-        {
-            Console.WriteLine($"Food id: {food.Id}");
-            Console.WriteLine($"Food name: {food.name}");
-            Console.WriteLine($"Food Price: {food.price}");
-            Console.WriteLine($"Food Quantity: {food.quantity}");
-        }
-    }
-
-    static void UpdateFood()
-    {
-        Console.WriteLine("Update Food");
-
-        Console.WriteLine("Enter food ID: ");
-        int foodId = Convert.ToInt32(Console.ReadLine());
-
-        bool found = false;
-
-        foreach(Food food in order)
-        {
-            if(food.Id == foodId)
+            if(status == 0)
             {
-                Console.WriteLine("Food Found !");
-
-                Console.WriteLine("Enter new name: ");
-                food.name = Console.ReadLine();
-
-                found = true;
-                Console.WriteLine("Order updated successfully");
+                absent++;
+            } else
+            {
+                present++;
             }
         }
-        
-        if(found == false)
-        {
-            Console.WriteLine("Not found");
-        }
 
-
-    }
-    
-    static void DeleteFood()
-    {
-        Console.WriteLine("Delete Food");
+        Console.WriteLine($"Total Present: {present}");
+        Console.WriteLine($"Total Absent: {absent}");
     }
 }
