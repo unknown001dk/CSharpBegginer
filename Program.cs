@@ -334,88 +334,158 @@
 // loops (for, foreach) array, objects
 
 
+// class Program
+// {
+//     static void Main()
+//     {
+
+//         // array  -> []
+//         // index start with 0
+//         // 0, 1, 2, 3, 4
+
+//         // int[] marks = { 85, 34, 45, 65, 76 };
+
+
+//         // condition -> pass mark 40 > pass ? fail
+
+//         // Console.WriteLine($"{marks.Length}");
+//         // marks[2]
+
+//         // for loop 
+//         // for (int i = 0; i < marks.Length; i++)
+//         // {
+//         //     // Console.WriteLine($"{marks[i]}");
+//         //     if(marks[i] >= 40)
+//         //     {
+//         //         Console.WriteLine("Pass");
+//         //     } else
+//         //     {
+//         //         Console.WriteLine("Fail");  
+//         //     }
+//         // }
+
+//         // int[] amount = {1200, 490, 560};
+//         // // sum of all number in an array
+
+//         // int total = 0;
+
+//         // foreach(int price in amount)
+//         // {
+//         //     // Console.WriteLine($"{price}");
+//         //     // total = total + price;
+
+//         //     total += price;
+//         // }
+
+//         // Console.WriteLine($"Total: {total}");
+
+//         // highest number in an array
+
+//         // lowest number in an array, second lowest number in an array 
+        
+
+//         // int[] num = {34, 45, 67, 34, 78};
+
+//         // int HighestValue = num[0];
+
+//         // for (int i = 1; i < num.Length; i++)
+//         // {
+//         //     if(num[i] > HighestValue)
+//         //     {
+//         //         HighestValue = num[i];
+//         //     }
+//         // }
+//         // Console.WriteLine($"Highest value: {HighestValue}");
+
+//         // attendance system
+
+//         int[] attendance = {0, 1, 1, 0, 1, 1, 0, 1};
+
+//         int present = 0;
+//         int absent = 0;
+
+//         foreach (int status in attendance)
+//         {
+//             if(status == 0)
+//             {
+//                 absent++;
+//             } else
+//             {
+//                 present++;
+//             }
+//         }
+
+//         Console.WriteLine($"Total Present: {present}");
+//         Console.WriteLine($"Total Absent: {absent}");
+//     }
+// }
+
+
+// class Program
+// {
+//      static void Main()
+//     {
+//         int[] numbers = {10, 20, 30};
+
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.WriteLine(numbers[i]);
+//         }
+
+//         int[] newNum = new int[numbers.Length + 1];
+
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             newNum[i] = numbers[i];
+//         }
+        
+//         newNum[newNum.Length - 1] = 40;
+
+//         numbers = newNum;
+
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.WriteLine(numbers[i]);
+//         }
+//     }
+// }
+
 class Program
 {
     static void Main()
     {
-
-        // array  -> []
-        // index start with 0
-        // 0, 1, 2, 3, 4
-
-        // int[] marks = { 85, 34, 45, 65, 76 };
-
-
-        // condition -> pass mark 40 > pass ? fail
-
-        // Console.WriteLine($"{marks.Length}");
-        // marks[2]
-
-        // for loop 
-        // for (int i = 0; i < marks.Length; i++)
-        // {
-        //     // Console.WriteLine($"{marks[i]}");
-        //     if(marks[i] >= 40)
-        //     {
-        //         Console.WriteLine("Pass");
-        //     } else
-        //     {
-        //         Console.WriteLine("Fail");  
-        //     }
-        // }
-
-        // int[] amount = {1200, 490, 560};
-        // // sum of all number in an array
-
-        // int total = 0;
-
-        // foreach(int price in amount)
-        // {
-        //     // Console.WriteLine($"{price}");
-        //     // total = total + price;
-
-        //     total += price;
-        // }
-
-        // Console.WriteLine($"Total: {total}");
-
-        // highest number in an array
-
-        // lowest number in an array, second lowest number in an array 
         
+        int[] numbers = {12, 13, 14}; 
 
-        // int[] num = {34, 45, 67, 34, 78};
-
-        // int HighestValue = num[0];
-
-        // for (int i = 1; i < num.Length; i++)
-        // {
-        //     if(num[i] > HighestValue)
-        //     {
-        //         HighestValue = num[i];
-        //     }
-        // }
-        // Console.WriteLine($"Highest value: {HighestValue}");
-
-        // attendance system
-
-        int[] attendance = {0, 1, 1, 0, 1, 1, 0, 1};
-
-        int present = 0;
-        int absent = 0;
-
-        foreach (int status in attendance)
+        Console.WriteLine("Before add: ");
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if(status == 0)
-            {
-                absent++;
-            } else
-            {
-                present++;
-            }
+            Console.WriteLine(numbers[i]);
         }
 
-        Console.WriteLine($"Total Present: {present}");
-        Console.WriteLine($"Total Absent: {absent}");
+        int[] newNum = new int[numbers.Length + 1];
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            newNum[i] = numbers[i];
+
+            // 0 = 0 index values
+            // newNum[0] = 11
+            // newNum[1] = 12
+            // newNum[2] = 13
+            // numbers
+        }
+
+        newNum[newNum.Length - 1] = 15;
+
+        numbers = newNum;
+
+        Console.WriteLine("After add: ");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.WriteLine(numbers[i]);
+        }
+
+
     }
 }
