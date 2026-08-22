@@ -450,42 +450,88 @@
 //     }
 // }
 
-class Program
-{
+// class Program
+// {
+//     static void Main()
+//     {
+        
+//         int[] numbers = {12, 13, 14}; 
+
+//         Console.WriteLine("Before add: ");
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.WriteLine(numbers[i]);
+//         }
+
+//         int[] newNum = new int[numbers.Length + 1];
+
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             newNum[i] = numbers[i];
+
+//             // 0 = 0 index values
+//             // newNum[0] = 11
+//             // newNum[1] = 12
+//             // newNum[2] = 13
+//             // numbers
+//         }
+
+//         newNum[newNum.Length - 1] = 15;
+
+//         numbers = newNum;
+
+//         Console.WriteLine("After add: ");
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.WriteLine(numbers[i]);
+//         }
+
+
+//     }
+// }
+
+class Program {
     static void Main()
     {
-        
-        int[] numbers = {12, 13, 14}; 
+        // step 1 
+        // create a array
+        int[] numbers = {10, 20, 30};
 
-        Console.WriteLine("Before add: ");
+        // step 2 
+        // print the values in an array
         for (int i = 0; i < numbers.Length; i++)
         {
             Console.WriteLine(numbers[i]);
         }
 
-        int[] newNum = new int[numbers.Length + 1];
+        // step 3 
+        // create a new array 
+        // create a array size which is one greater than numbers
+        int[] newNumbers = new int[numbers.Length + 1];
 
+        // step 4
+        // add values to the newNumbers array
         for (int i = 0; i < numbers.Length; i++)
         {
-            newNum[i] = numbers[i];
-
-            // 0 = 0 index values
-            // newNum[0] = 11
-            // newNum[1] = 12
-            // newNum[2] = 13
-            // numbers
+            newNumbers[i] = numbers[i];
+            // newNumbers[0] = 10
+            // newNumbers[1] = 20
+            // newNumbers[2] = 30
         }
 
-        newNum[newNum.Length - 1] = 15;
+        // step 5
+        // add last value in a newNumbers array
+        newNumbers[newNumbers.Length -1] = 40;
 
-        numbers = newNum;
+        // step 6
+        // change array values numbers to newNumbers
+        numbers = newNumbers;
 
-        Console.WriteLine("After add: ");
+        //step 7
+        // print all values in an array
         for (int i = 0; i < numbers.Length; i++)
         {
             Console.WriteLine(numbers[i]);
         }
-
-
     }
 }
