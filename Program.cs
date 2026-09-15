@@ -112,14 +112,22 @@
 //         Console.WriteLine("        VIEW person");
 //         Console.WriteLine("=======================");
 
-//         foreach (Person person in people)
+//         // foreach (Person person in people)
+//         // {
+//         //     Console.WriteLine($"Person ID: {person.Id}");
+//         //     Console.WriteLine($"Person Name: {person.name}");
+//         //     Console.WriteLine($"Person Age: {person.age}");
+//         //     Console.WriteLine($"Person City: {person.city}");
+//         //     Console.WriteLine($"Person Phone: {person.phone}");
+//         //     Console.WriteLine("=======================");
+//         // }
+//         for (int i = 0; i < people.Count; i++)
 //         {
-//             Console.WriteLine($"Person ID: {person.Id}");
-//             Console.WriteLine($"Person Name: {person.name}");
-//             Console.WriteLine($"Person Age: {person.age}");
-//             Console.WriteLine($"Person City: {person.city}");
-//             Console.WriteLine($"Person Phone: {person.phone}");
-//             Console.WriteLine("=======================");
+//             // Console.WriteLine(people[i].name);
+//             if(people[i].Id == 101)
+//             {
+//                 Console.WriteLine("Found");
+//             }
 //         }
 //     }
 
@@ -490,48 +498,507 @@
 //     }
 // }
 
-class Program {
-    static void Main()
-    {
-        // step 1 
-        // create a array
-        int[] numbers = {10, 20, 30};
+// class Program {
+//     static void Main()
+//     {
+//         // step 1 
+//         // create a array
+//         int[] numbers = {10, 20, 30};
 
-        // step 2 
-        // print the values in an array
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.WriteLine(numbers[i]);
-        }
+//         // step 2 
+//         // print the values in an array
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.WriteLine(numbers[i]);
+//         }
 
-        // step 3 
-        // create a new array 
-        // create a array size which is one greater than numbers
-        int[] newNumbers = new int[numbers.Length + 1];
+//         // step 3 
+//         // create a new array 
+//         // create a array size which is one greater than numbers
+//         int[] newNumbers = new int[numbers.Length + 1];
 
-        // step 4
-        // add values to the newNumbers array
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            newNumbers[i] = numbers[i];
-            // newNumbers[0] = 10
-            // newNumbers[1] = 20
-            // newNumbers[2] = 30
-        }
+//         // step 4
+//         // add values to the newNumbers array
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             newNumbers[i] = numbers[i];
+//             // newNumbers[0] = 10
+//             // newNumbers[1] = 20
+//             // newNumbers[2] = 30
+//         }
 
-        // step 5
-        // add last value in a newNumbers array
-        newNumbers[newNumbers.Length -1] = 40;
+//         // step 5
+//         // add last value in a newNumbers array
+//         newNumbers[newNumbers.Length -1] = 40;
 
-        // step 6
-        // change array values numbers to newNumbers
-        numbers = newNumbers;
+//         // step 6
+//         // change array values numbers to newNumbers
+//         numbers = newNumbers;
 
-        //step 7
-        // print all values in an array
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.WriteLine(numbers[i]);
-        }
-    }
-}
+//         //step 7
+//         // print all values in an array
+//         for (int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.WriteLine(numbers[i]);
+//         }
+//     }
+// }
+
+// using System;
+// using System.Collections.Generic;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         List<int> numbers = new List<int>();
+
+//         numbers.Add(10);
+//         numbers.Add(20);
+//         numbers.Add(30);
+//         numbers.Add(40);
+//         numbers.Add(50);
+
+//         Console.WriteLine("Enter number: ");
+//         int value = Convert.ToInt32(Console.ReadLine());
+
+//         numbers.Contains(value);
+
+
+
+//         // numbers.Add(number);
+
+//         foreach (int number in numbers)
+//         {
+//             Console.WriteLine("~~~~~~~~~~~~~~~~~");
+//             Console.WriteLine(number);
+//         }
+
+//         // Console.WriteLine(numbers.Count);
+
+//         // number[i]
+
+//     }
+// }
+
+
+// using System;
+// using System.IO;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         string filePath = "data.txt";
+
+//         // file create -> File.Create()
+
+//         // file existing or not -> File.Exists
+//         if(File.Exists(filePath))
+//         {   
+//             File.Delete(filePath);
+//             Console.WriteLine("File deleted.");
+//         } else
+//         {
+//             // File.Create(filePath);
+//             Console.WriteLine("File not deleted");
+//         }
+
+//         // Console.Write("Enter Text: ");
+//         // string text = Console.ReadLine();
+
+//         // // add text inside the file
+//         // File.WriteAllText(filePath, text);
+
+//         // string data = File.ReadAllText(filePath);
+//         // Console.WriteLine(data);
+
+//         // File.AppendAllText(filePath, text + Environment.NewLine);
+
+//         // Console.WriteLine("Text added");
+
+
+
+//         // file edit
+
+//         // Console.WriteLine("Enter Want to edit text: ");
+//         // string oldValue = Console.ReadLine();
+
+//         // Console.WriteLine("Enter new value: ");
+//         // string newValue = Console.ReadLine();
+
+//         // // contains -> is have or not
+//         // if (data.Contains(oldValue))
+//         // {
+//         //     data = data.Replace(oldValue, newValue);
+//         //     File.WriteAllText(filePath, data);
+//         //     Console.WriteLine("Valued added");
+//         // } else
+//         // {
+//         //     Console.WriteLine("Value not found!");
+//         // }
+
+
+//         // read file
+//         // find
+//         // remove
+//         // write
+
+
+
+
+//     }
+// }
+
+
+// variables
+// data types 
+    // int 
+    // float
+    // double
+    // boolean
+    // string
+// operators
+  // arithimatic operator
+    // addition +
+    // subtraction -
+    // multiplication *
+    // division /
+    // modules %
+  // logical operator
+    // and &&
+    // or ||
+    // not !
+  // comparsion operator
+    // equal == 
+    // greater than >
+    // greater than or equal to >=
+    // less than <
+    // less than or equal to <=
+    // not equal to !=
+
+// conditons -> if,  else if, else
+// switch
+// loops -> for, foreach, while
+// methods / functions
+// array 
+// list
+// file handling
+// debuging
+
+// yet to know
+// class -> oops 
+
+
+
+
+// using System;
+// using System.IO;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         string filePath = "data2.txt";
+
+        // File.Create(filePath);
+
+        // if(File.Exists(filePath)) 
+        // {
+        //   Console.WriteLine("File already exists!");
+        // } else {
+        //   File.Create(filePath);
+        //   Console.WriteLine("File created!");
+        // }
+
+        // file create -> File.Create()
+
+        // file existing or not -> File.Exists
+        // if(File.Exists(filePath))
+        // {   
+        //     File.Delete(filePath);
+        //     Console.WriteLine("File deleted.");
+        // } else
+        // {
+        //     // File.Create(filePath);
+        //     Console.WriteLine("File not deleted");
+        // }
+
+        // Console.WriteLine("Enter Text: ");
+        // string text = Console.ReadLine();
+
+        // // // add text inside the file
+        // File.WriteAllText(filePath, text);
+
+        // string data = File.ReadAllText(filePath);
+        // Console.WriteLine(data);
+
+        // File.AppendAllText(filePath, text + Environment.NewLine);
+
+        // Console.WriteLine("Text added");
+
+
+
+        // file edit
+
+        // Console.WriteLine("Enter Want to edit text: ");
+        // string oldValue = Console.ReadLine();
+
+        // Console.WriteLine("Enter new value: ");
+        // string newValue = Console.ReadLine();
+
+        // // contains -> is have or not
+        // if (data.Contains(oldValue))
+        // {
+        //     data = data.Replace(oldValue, newValue);
+        //     File.WriteAllText(filePath, data);
+        //     Console.WriteLine("Valued added");
+        // } else
+        // {
+        //     Console.WriteLine("Value not found!");
+        // }
+
+
+        // read file
+        // find
+        // remove
+        // write
+//     }
+// }
+
+// oops -> object oriented programming
+  // encapsulation
+  // inheritance
+  // polymorphism
+  // abstraction
+
+// encapsulation
+
+// private , public 
+
+// using System;
+
+
+// class BankAccount
+// {
+//     private double balance = 500;
+
+//     // declare (amount)
+//     public void Deposit(double amount)
+//     {
+//         if(amount > 0)
+//         {
+//             balance += amount;
+//             // balance = balance + amount;
+//             Console.WriteLine("Amount deposited successfully");
+//         } else
+//         {
+//             Console.WriteLine("Invalid amount");
+//         }
+//     }
+
+//     public void showBalance()
+//     {
+//         Console.WriteLine($"Balance: {balance}");
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         BankAccount account = new BankAccount();
+
+//         account.Deposit(5000);
+//         account.showBalance();
+
+//         account.Deposit(9000);
+//         account.showBalance();
+
+//         account.Deposit(8000);
+//         account.showBalance();
+//     }    
+// }
+
+
+// parent , child  -> inheritance 
+
+// using System;
+
+// // parent class
+// class Person
+// {
+//     public string name;
+//     public int age;
+
+//     public void DisplayPerson()
+//     {
+//         Console.WriteLine($"Name: {name}");
+//         Console.WriteLine($"Age: {age}");
+//     } 
+// }
+
+// class Employee : Person
+// {
+//     public string department;
+//     public double salary;
+//     public void DisplayEmployee()
+//     {
+//         DisplayPerson();
+//         Console.WriteLine($"Department: {department}");
+//         Console.WriteLine($"salary: {salary}");
+//     } 
+// }
+
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Employee employee = new Employee();
+
+//         employee.name = "Dinesh";
+//         employee.age = 22;
+//         employee.department = "IT";
+//         employee.salary = 3000;
+
+//         employee.DisplayEmployee(); 
+//     }
+// }
+
+// // polymorphism
+// // abstraction
+
+
+// bool isLoggedIn = false;
+
+// string email = "dk@gmail.com";
+// string password = "123456";
+
+// if (email == "dk@gmail.com" && password == "123456")
+// {
+//   Console.WriteLine("Login successful");
+// } else {
+//   Console.WriteLine("Login failed");
+// }
+
+// polymorphism
+// method overriding
+// using System;
+
+// class Payment
+// {
+  
+//   public virtual void Pay()
+//   {
+//     Console.WriteLine("Payment processing...");
+//   }
+// }
+
+// class UPIPayment: Payment
+// {
+//   public override void Pay()
+//   {
+//     Console.WriteLine("Payment process through UPI");
+//   }
+
+//   public void Test()
+//   {
+//     Console.WriteLine("Test");
+//   }
+// }
+
+// class CardPayment : Payment
+// {
+//    public override void Pay()
+//   {
+//     Console.WriteLine("Payment process through Card");
+//   }
+// }
+
+// class Program {
+//   static void Main() {
+//     Payment payment;
+
+//     payment = new UPIPayment();
+//     payment.Pay();
+//     ((UPIPayment)payment).Test();
+//     // type casting 
+
+//     payment = new CardPayment();
+//     payment.Pay();
+//   }
+// }
+
+// try catch -> error handling
+// using System;
+
+// class Program
+// {
+//   static void Main()
+//   {
+//     int balance = 10000;
+
+//     try
+//     {
+//       // code 
+//       Console.WriteLine("Enter the amount: ");
+//       int amount = Convert.ToInt32(Console.ReadLine());
+
+//       if(amount <= 0)
+//       {
+//         Console.WriteLine("Amount must be greater than 0");
+//       } else if ( amount > balance)
+//       {
+//         Console.WriteLine("Insufficient balance");
+//       } else
+//       {
+//         balance -= amount;
+//         Console.WriteLine("Withdrawl successfull"); 
+//         Console.WriteLine($"Remaining Balance: {balance}");
+//       }
+//     }
+//     catch (Exception ex)
+//     {
+//       // error 
+//       Console.WriteLine($"Something went wrong: {ex.Message}");
+//     } finally
+//     {
+//       Console.WriteLine("It always working");
+//     }
+    
+//   }
+// }
+
+// using System;
+
+// class Program
+// {
+//   static void Main()
+//   {
+//     try
+//     {
+//       string username = "admin";
+//       string password = "123456";
+
+//       Console.WriteLine("Enter username: ");
+//       string inputUsername = Console.ReadLine();
+
+//       Console.WriteLine("Enter password: ");
+//       string inputPassword = Console.ReadLine();
+
+//       if(inputUsername == username && inputPassword == password)
+//       {
+//         Console.WriteLine("Login successful");
+//       } else
+//       {
+//         throw new Exception("Invaild username or password");
+//       }
+//     }
+//     catch (Exception ex)
+//     {
+//       Console.WriteLine($"Login Faild: {ex.Message}");
+//     }
+//   }
+// }
+
